@@ -15,10 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBarItem: NSStatusItem!
     var timer: Timer!
     
-    @objc func onButtonClick(sender: AnyObject?) {
-        print("status bar clicked")
-    }
-    
     func setTitle(d: Double) {
         DispatchQueue.main.async {
             
@@ -33,14 +29,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 button.imagePosition = NSControl.ImagePosition.imageLeft
                 button.title = priceString
             }
-        }
-    }
-    @objc func didTapOne() {
-        print("ONE")
-        
-        let url = URL(string: "https://coinmarketcap.com")!
-        if NSWorkspace.shared.open(url) {
-            print("default browser was successfully opened")
         }
     }
     func getData(){
